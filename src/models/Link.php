@@ -315,7 +315,7 @@ class Link extends ForeignFieldModel
    * @param string $fallbackText
    * @return string
    */
-  public function getText(string $fallbackText = "Learn More") {
+  public function getText(string $fallbackText = null) {
     if ($this->getAllowCustomText() && !empty($this->customText)) {
       return $this->customText;
     }
